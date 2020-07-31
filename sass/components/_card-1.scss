@@ -1,0 +1,50 @@
+.cards-container {
+}
+
+.card-1 {
+  background-color: $text-color-0;
+  text-align: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-out;
+  @include box-shadow-1;
+  height: 23rem;
+
+  &__header {
+    height: 6rem;
+
+    background: linear-gradient(-45deg, #7ed56f, #55c57a, #087523);
+    background-size: 200% 200%;
+    animation: backgroud 10s ease infinite;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center;
+    padding-top: 2.1rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: $text-color-1;
+  }
+
+  &--node {
+    @include gradient-text;
+  }
+
+  margin-right: 5rem;
+  &--react {
+    @include gradient-text($color-primary-light, $color-primary-dark);
+  }
+  &--javascript {
+    @include gradient-text($color-yellow-light, $color-yellow-dark);
+  }
+  &--angular {
+    @include gradient-text($color-red-light, $color-red-dark);
+  }
+  &--database {
+  }
+
+  &:hover {
+    transform: scale(1.1, 1.1) translateY(-1rem);
+  }
+}

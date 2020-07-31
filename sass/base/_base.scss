@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited {
+  color: $text-color-4;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubic", sans-serif;
+  direction: rtl;
+}
+
+body {
+  font-size: $default-font-size;
+  color: $text-color-5;
+  padding: 2rem;
+}
+
+.main-content {
+  position: relative;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: $grid-width;
+}
+
+#particles {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

@@ -1,0 +1,70 @@
+.btn {
+  font-weight: 700;
+  min-width: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 1rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid $text-color-3;
+  color: $text-color-0;
+  position: relative;
+  transition: all 0.1s ease;
+  @include box-shadow-1;
+
+  &:hover {
+    transform: translateY(-0.1rem);
+    border-color: $color-primary-light;
+    color: $text-color-2;
+  }
+
+  &:active {
+    transform: translateY(0.1rem);
+    border-color: $color-primary-light;
+    color: $color-primary-light;
+  }
+
+  &:hover::after {
+    color: $color-orange-light;
+    border-color: $color-primary-light;
+    color: $color-primary-light;
+  }
+
+  &:hover::before {
+    background-color: #fff;
+    border-color: $color-orange-light;
+    transform: translate(-50%, -50%) scale(1.5, 2);
+    transform-origin: center;
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 120%;
+    height: 150%;
+    opacity: 1;
+    transition: all 0.2s ease;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    display: block;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 150%;
+    @include box-shadow-1;
+  }
+}

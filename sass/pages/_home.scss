@@ -1,0 +1,131 @@
+.header {
+  height: 75vh;
+  width: 100%;
+  display: block;
+  background-image: linear-gradient(
+      rgba($color-primary-light, 0.68),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("/img/header_logo.jpg");
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+
+  position: relative;
+  &__box {
+    @include centerAbsolute;
+    text-align: center;
+    z-index: 100;
+    h1,
+    h2 {
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    h1 {
+      font-size: 8.5rem;
+      font-weight: 700;
+      // @include gradient-text($color-secondary-light, $color-secondary-dark);
+      animation: moveLeft 1.2s 1s backwards ease-out;
+      background-color: rgba($text-color-10, 0.3);
+      color: $text-color-0;
+      @include box-shadow-2;
+    }
+    h2 {
+      font-size: 3rem;
+      color: $text-color-1;
+      letter-spacing: 2.7rem;
+      text-align: center;
+      margin-top: 1.2rem;
+      margin-right: -1.3rem;
+      background-color: rgba($text-color-10, 0.3);
+      color: $text-color-0;
+      animation: moveRight 1.2s 1.2s backwards ease-out;
+      @include box-shadow-2;
+    }
+  }
+}
+
+.header-tools {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  color: $text-color-0;
+  z-index: 100;
+  font-size: 2.5rem;
+  font-weight: 400;
+
+  &__list li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__github-icon {
+    margin-top: -0.9rem;
+    font-size: 5rem;
+    margin-right: 1rem;
+  }
+
+  & :link,
+  & :visited,
+  & :active {
+    color: $text-color-0;
+  }
+}
+
+.about-us-container {
+  margin-top: 1.5rem;
+}
+.about-us {
+  height: 100rem;
+  width: 100rem;
+  &__avatar {
+    background-image: url("/img/avatar.png");
+    width: 20%;
+    height: 20%;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid #777;
+    @include box-shadow-1;
+  }
+}
+
+.tech-container {
+  margin-top: -38rem;
+  background-color: $text-color-3;
+  padding-top: 40rem;
+  padding-bottom: 55rem;
+  .wrapper {
+    margin-top: 190px;
+  }
+}
+
+.tech {
+  &__icon {
+    font-size: 10rem;
+  }
+  & .row {
+    margin-bottom: 8rem;
+  }
+}
+
+// icons
+.fac-database {
+  background-image: url("/img/svg/database.svg");
+  background-repeat: no-repeat;
+  background-color: red;
+  display: block;
+  height: 10rem;
+  width: 10rem;
+}
+
+.section-info__container {
+  margin-top: -25rem;
+  background: linear-gradient(
+      rgba($color-primary-light, 0.68),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(/img/header_3.jpg);
+  height: 66rem;
+  background-size: cover;
+  transform: skewY(-7deg);
+}
