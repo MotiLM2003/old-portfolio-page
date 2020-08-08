@@ -372,7 +372,7 @@ body {
 .carousel__cell {
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 250px;
   left: 0;
   top: 0;
   font-size: 80px;
@@ -398,10 +398,12 @@ body {
 .carousel__info {
   position: absolute;
   bottom: 0;
-  height: 15rem;
-  font-size: 5.5rem;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%; }
+  height: 8rem;
+  font-size: 2.2rem;
+  background: rgba(70, 69, 69, 0.8);
+  width: 100%;
+  text-align: right;
+  padding: 1rem 2rem; }
 
 .carousel__cell:nth-child(9n + 1) {
   background: rgba(0, 0, 0, 0.8); }
@@ -472,7 +474,7 @@ body {
   width: 100%;
   display: block;
   z-index: 1;
-  background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url("img/header_logo.jpg");
+  background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url("../img/header_logo.jpg");
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
   position: relative; }
@@ -534,7 +536,7 @@ body {
   height: 100rem;
   width: 100rem; }
   .about-us__avatar {
-    background-image: url("img/avatar.png");
+    background-image: url("../img/avatar.png");
     width: 20%;
     height: 20%;
     background-size: cover;
@@ -559,7 +561,7 @@ body {
   margin-bottom: 8rem; }
 
 .fac-database {
-  background-image: url("img/svg/database.svg");
+  background-image: url("../img/svg/database.svg");
   background-repeat: no-repeat;
   background-color: red;
   display: block;
@@ -568,7 +570,7 @@ body {
 
 .section-info__container {
   margin-top: -20rem;
-  background: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url(img/header_3.jpg);
+  background: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url(../img/header_3.jpg);
   height: 87rem;
   background-size: cover;
   transform: skewY(-7deg); }

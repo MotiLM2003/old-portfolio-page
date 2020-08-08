@@ -30,7 +30,7 @@ body {
 .carousel__cell {
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 250px;
   left: 0;
   top: 0;
   font-size: 80px;
@@ -59,10 +59,12 @@ body {
 .carousel__info {
   position: absolute;
   bottom: 0;
-  height: 15rem;
-  font-size: 5.5rem;
-  background: rgba(#000000, 0.4);
+  height: 8rem;
+  font-size: 2.2rem;
+  background: rgba(rgb(70, 69, 69), 0.8);
   width: 100%;
+  text-align: right;
+  padding: 1rem 2rem;
 }
 
 .carousel__cell:nth-child(9n + 1) {
