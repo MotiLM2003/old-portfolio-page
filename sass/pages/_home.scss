@@ -2,27 +2,27 @@
   height: 75vh;
   width: 100%;
   display: block;
+  z-index: 1;
   background-image: linear-gradient(
       rgba($color-primary-light, 0.68),
       rgba($color-primary-dark, 0.8)
     ),
-    url("/img/header_logo.jpg");
+    url('/img/header_logo.jpg');
   background-size: cover;
-
-  clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
-
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
   position: relative;
   &__box {
     @include centerAbsolute;
     text-align: center;
     z-index: 100;
+    top: 50%;
     h1,
     h2 {
       padding: 1rem;
       border-radius: 1rem;
     }
     h1 {
-      font-size: 8.5rem;
+      font-size: 4.5rem;
       font-weight: 700;
       // @include gradient-text($color-secondary-light, $color-secondary-dark);
       animation: moveLeft 1.2s 1s backwards ease-out;
@@ -79,7 +79,7 @@
   height: 100rem;
   width: 100rem;
   &__avatar {
-    background-image: url("/img/avatar.png");
+    background-image: url('/img/avatar.png');
     width: 20%;
     height: 20%;
     background-size: cover;
@@ -90,10 +90,12 @@
 }
 
 .tech-container {
-  margin-top: -38rem;
+  margin-top: -18rem;
   background-color: $text-color-3;
-  padding-top: 40rem;
+  padding-top: 22rem;
   padding-bottom: 55rem;
+  position: relative;
+  height: 125rem;
   .wrapper {
     margin-top: 190px;
   }
@@ -110,7 +112,7 @@
 
 // icons
 .fac-database {
-  background-image: url("/img/svg/database.svg");
+  background-image: url('/img/svg/database.svg');
   background-repeat: no-repeat;
   background-color: red;
   display: block;
@@ -119,13 +121,17 @@
 }
 
 .section-info__container {
-  margin-top: -25rem;
+  margin-top: -20rem;
   background: linear-gradient(
       rgba($color-primary-light, 0.68),
       rgba($color-primary-dark, 0.8)
     ),
     url(/img/header_3.jpg);
-  height: 66rem;
+  height: 87rem;
   background-size: cover;
   transform: skewY(-7deg);
+  .wrapper {
+    transform: skewY(6deg);
+    padding-top: 17rem;
+  }
 }

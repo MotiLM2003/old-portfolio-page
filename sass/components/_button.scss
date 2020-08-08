@@ -12,6 +12,7 @@
   background-color: transparent;
   border: 2px solid $text-color-3;
   color: $text-color-0;
+  border-radius: 5px;
   position: relative;
   transition: all 0.1s ease;
   @include box-shadow-1;
@@ -39,11 +40,12 @@
     border-color: $color-orange-light;
     transform: translate(-50%, -50%) scale(1.5, 2);
     transform-origin: center;
+    border-radius: 22px;
     opacity: 0;
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     background-color: inherit;
@@ -53,10 +55,11 @@
     height: 150%;
     opacity: 1;
     transition: all 0.2s ease;
+    opacity: .8;
     z-index: -1;
   }
   &::after {
-    content: "";
+    content: '';
     display: block;
     border: 2px solid #fff;
     position: absolute;
@@ -66,5 +69,7 @@
     width: 120%;
     height: 150%;
     @include box-shadow-1;
+
+    border-radius: 5px;
   }
 }

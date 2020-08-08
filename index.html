@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to my protfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -21,8 +22,7 @@
         <div id="particles"></div>
         <nav class="navigation">
           <ul class="navigation__menu-items">
-            <li class="btn">קצת עלינו</li>
-            <li class="btn"> איך נוכל לעזור</li>
+            <li class="btn">פרוייקטים</li>
             <li class="btn">טכנולוגיות</li>
             <li class="btn">כישורים</li>
             <li class="btn">צור קשר</li>
@@ -47,12 +47,124 @@
         </div>
       </section>
       <section class="tech-container">
-        <svg style="position: absolute;left:0px;z-index:0;" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="40rem" id="blobSvg">
-          <path id="blob" d="M462,303Q453,356,400.5,374Q348,392,310,411Q272,430,221,445.5Q170,461,122,433.5Q74,406,80.5,348Q87,290,74,246.5Q61,203,68,149Q75,95,127,78.5Q179,62,229,36Q279,10,312.5,60.5Q346,111,390.5,132Q435,153,453,201.5Q471,250,462,303Z" fill="#d1d8e0"></path>
-        </svg>
+        <div class="scene">
+          <div class="carousel">
+            <div class="carousel__cell">
+              <a href="https://motilm2003.github.io/trillo/" target="_blank">
+                <img src="img/projects/p-1.JPG"
+              /></a>
+              <div class="carousel__info">
+                Responsive
+              </div>
+            </div>
+            <div class="carousel__cell">
+              <a href="https://motilm2003.github.io/Natours/" target="_blank">
+                <img src="img/projects/p-2.JPG"
+              /></a>
+            </div>
+            <div class="carousel__cell">
+              <a
+                href="https://motilm2003.github.io/quotes-robo/"
+                target="_blank"
+              >
+                <img src="img/projects/p-3.JPG"
+              /></a>
+              <div class="carousel__info">
+                Responsive
+              </div>
+            </div>
+            <div class="carousel__cell">
+              <a
+                href="https://motilm2003.github.io/dynamic-site/"
+                target="_blank"
+              >
+                <img src="img/projects/p-4.JPG"
+              /></a>
+              <div class="carousel__info">
+                Responsive
+              </div>
+            </div>
+            <div class="carousel__cell">
+              <a
+                href="https://motilm2003.github.io/music-player/"
+                target="_blank"
+              >
+                <img src="img/projects/p-5.JPG"
+              /></a>
+              <div class="carousel__info">
+                Responsive
+              </div>
+            </div>
+            <div class="carousel__cell">
+              <a
+              href="https://motilm2003.github.io/quotes-robo/"
+              target="_blank"
+            >
+              <img src="img/projects/p-3.JPG"
+            /></a>
+            <div class="carousel__info">
+              Responsive
+            </div>
+            </div>
+            <div class="carousel__cell"> <a
+              href="https://motilm2003.github.io/quotes-robo/"
+              target="_blank"
+            >
+              <img src="img/projects/p-3.JPG"
+            /></a>
+            <div class="carousel__info">
+              Responsive
+            </div></div>
+            <div class="carousel__cell">8</div>
+            <div class="carousel__cell">9</div>
+            <div class="carousel__cell">10</div>
+            <div class="carousel__cell">11</div>
+            <div class="carousel__cell">12</div>
+            <div class="carousel__cell">13</div>
+            <div class="carousel__cell">14</div>
+            <div class="carousel__cell">15</div>
+          </div>
+        </div>
+
+        <div class="carousel-options">
+          <p>
+            <label>
+              Cells
+              <input
+                class="cells-range"
+                type="range"
+                min="3"
+                max="15"
+                value="9"
+              />
+            </label>
+          </p>
+          <p>
+            <button class="previous-button">Previous</button>
+            <button class="next-button">Next</button>
+          </p>
+          <p>
+            Orientation:
+            <label>
+              <input
+                type="radio"
+                name="orientation"
+                value="horizontal"
+                checked
+              />
+              horizontal
+            </label>
+            <label>
+              <input type="radio" name="orientation" value="vertical" />
+              vertical
+            </label>
+          </p>
+        </div>
+      </section>
+      <section class="section-info__container">
         <div class="wrapper">
           <div class="tech">
-            <div class="row">
+            <div class="row" data-aos="zoom-out-in">
               <div class="cards-container">
                 <div class="col-3">
                   <div class="card-1">
@@ -96,7 +208,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row" data-aos="zoom-out-up">
               <div class="cards-container">
                 <div class="col-3">
                   <div class="card-1">
@@ -143,30 +255,21 @@
           </div>
         </div>
       </section>
-      <section class="section-info__container">
-        <div class="section-info">
-          <div class="row">
-            <div class="info-box">
-              <h3>Text 1</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="about-us-container">
-        <div class="wrapper">
-          <div class="about-us">
-            <div class="about-us__avatar">
-              &nbsp;
-            </div>
-          </div>
-        </div>
-      </section> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      particlesJS.load("particles", "particles.json", function () {});
+      AOS.init({
+        delay: 100,
+        duration: 1200,
+        once: true,
+        mirror: false,
+      });
     </script>
+    <script>
+      particlesJS.load('particles', 'particles.json', function () {});
+    </script>
+    <script src="/scripts/carousel.js"></script>
   </body>
 </html>
