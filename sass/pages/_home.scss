@@ -7,7 +7,7 @@
       rgba($color-primary-light, 0.68),
       rgba($color-primary-dark, 0.8)
     ),
-    url('/img/header_logo.jpg');
+    url('img/header_logo.jpg');
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
   position: relative;
@@ -79,7 +79,7 @@
   height: 100rem;
   width: 100rem;
   &__avatar {
-    background-image: url('/img/avatar.png');
+    background-image: url('img/avatar.png');
     width: 20%;
     height: 20%;
     background-size: cover;
@@ -112,7 +112,7 @@
 
 // icons
 .fac-database {
-  background-image: url('/img/svg/database.svg');
+  background-image: url('img/svg/database.svg');
   background-repeat: no-repeat;
   background-color: red;
   display: block;
@@ -126,7 +126,7 @@
       rgba($color-primary-light, 0.68),
       rgba($color-primary-dark, 0.8)
     ),
-    url(/img/header_3.jpg);
+    url(img/header_3.jpg);
   height: 87rem;
   background-size: cover;
   transform: skewY(-7deg);

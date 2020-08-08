@@ -472,7 +472,7 @@ body {
   width: 100%;
   display: block;
   z-index: 1;
-  background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url("/img/header_logo.jpg");
+  background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url("img/header_logo.jpg");
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
   position: relative; }
@@ -534,7 +534,7 @@ body {
   height: 100rem;
   width: 100rem; }
   .about-us__avatar {
-    background-image: url("/img/avatar.png");
+    background-image: url("img/avatar.png");
     width: 20%;
     height: 20%;
     background-size: cover;
@@ -559,7 +559,7 @@ body {
   margin-bottom: 8rem; }
 
 .fac-database {
-  background-image: url("/img/svg/database.svg");
+  background-image: url("img/svg/database.svg");
   background-repeat: no-repeat;
   background-color: red;
   display: block;
@@ -568,7 +568,7 @@ body {
 
 .section-info__container {
   margin-top: -20rem;
-  background: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url(/img/header_3.jpg);
+  background: linear-gradient(rgba(146, 168, 209, 0.68), rgba(3, 79, 132, 0.8)), url(img/header_3.jpg);
   height: 87rem;
   background-size: cover;
   transform: skewY(-7deg); }
