@@ -56,10 +56,6 @@ nextButton.addEventListener('click', function () {
   rotateCarousel();
 });
 
-var cellsRange = document.querySelector('.cells-range');
-cellsRange.addEventListener('change', changeCarousel);
-cellsRange.addEventListener('input', changeCarousel);
-
 function changeCarousel() {
   cellCount = 7; // cellsRange.value;
   theta = 360 / cellCount;
@@ -95,7 +91,7 @@ function onOrientationChange() {
   var checkedRadio = document.querySelector(
     'input[name="orientation"]:checked'
   );
-  isHorizontal = checkedRadio.value == 'horizontal';
+  isHorizontal =  true//checkedRadio.value == 'horizontal';
   rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
   changeCarousel();
 }

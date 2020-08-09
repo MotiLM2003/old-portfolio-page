@@ -1,5 +1,5 @@
 .header {
-  height: 75vh;
+  height: 97vh;
   width: 100%;
   display: block;
   z-index: 1;
@@ -9,13 +9,23 @@
     ),
     url('../img/header_logo.jpg');
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 0,
+    100% 74%,
+    73% 81%,
+    31% 91%,
+    0 100%,
+    0 0
+  );
+
   position: relative;
   &__box {
     @include centerAbsolute;
     text-align: center;
     z-index: 100;
-    top: 50%;
+
     h1,
     h2 {
       padding: 1rem;
@@ -91,11 +101,17 @@
 
 .tech-container {
   margin-top: -18rem;
-  background-color: $text-color-3;
-  padding-top: 22rem;
+
+  display: flex;
+  padding-top: 17rem;
   padding-bottom: 55rem;
   position: relative;
-  height: 125rem;
+
+  height: 150rem;
+
+  &__wrapper {
+    margin: 0 auto;
+  }
   .wrapper {
     margin-top: 190px;
   }
