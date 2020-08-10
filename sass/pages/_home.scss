@@ -54,6 +54,7 @@
     }
   }
 }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -61,11 +62,14 @@
   width: 100%;
   z-index: -20;
   opacity: 0.55;
-  filter: blur(3px) brightness(110%); }
-  .bg-video__content {
-    width: 100%;
-    height: 118.5rem;
-    object-fit: cover; }
+  filter: blur(3px) brightness(110%);
+
+}
+.bg-video__content {
+  width: 100%;
+  height: 118.5rem;
+  object-fit: cover;
+}
 
 .header-tools {
   position: absolute;
@@ -123,7 +127,6 @@
     margin-top: 190px;
   }
 }
-
 
 .tech {
   &__icon {
