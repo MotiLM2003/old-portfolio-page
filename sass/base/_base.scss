@@ -37,6 +37,7 @@ body {
   position: relative;
 }
 .wrapper {
+  min-width: 120rem;
   margin: 0 auto;
   max-width: $grid-width;
 }
@@ -46,5 +47,12 @@ body {
   background: transparent;
   top: 0;
   width: 100%;
+  z-index: 100;
+}
+
+.h-item {
+ width: 200px;
+  min-height: 200px;
+  background-color: #fff;
   z-index: 100;
 }

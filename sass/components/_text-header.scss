@@ -1,0 +1,18 @@
+.text-header {
+  //   background-color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.4),
+    rgba(#fff, 0.4)
+  );
+
+  color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 3rem;
+  margin: 0 auto;
+  padding-right: 3rem;
+  border: 0.1rem solid $color-primary;
+  width: 38%;
+  box-shadow: $shadow-box-default;
+}

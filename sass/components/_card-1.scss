@@ -6,13 +6,13 @@
   text-align: center;
   border-radius: 1rem;
   transition: all 0.3s ease-out;
-  @include box-shadow-1;
+  @include box-shadow-3;
   height: 23rem;
 
   &__header {
     height: 6rem;
 
-    background: linear-gradient(-45deg, #7ed56f, #55c57a, #087523);
+    background: linear-gradient(-45deg,$color-primary, $color-primary-light);
     background-size: 200% 200%;
     animation: backgroud 10s ease infinite;
 
@@ -33,7 +33,7 @@
 
   margin-right: 5rem;
   &--react {
-    @include gradient-text($color-primary-light, $color-primary-dark);
+    @include gradient-text(#61dafc,#22a3c7);
   }
   &--javascript {
     @include gradient-text($color-yellow-light, $color-yellow-dark);

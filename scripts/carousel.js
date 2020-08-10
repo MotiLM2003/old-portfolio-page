@@ -21,27 +21,48 @@ sections.forEach((section) => {
 var carousel = document.querySelector('.carousel');
 var cells = carousel.querySelectorAll('.carousel__cell');
 var cellCount; // cellCount set from cells-range input value
-var selectedIndex = 0;
+var selectedIndex = 3;
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
 var isHorizontal = true;
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 var radius, theta;
-// console.log( cellWidth, cellHeight );
+
+const skipToButtonContainer = document.querySelector('.carousel-skip-to');
+
+cells.forEach((item, index) => {
+  
+  
+  const span = document.createElement('span');
+  span.addEventListener('click', () => {
+    selectedIndex = index;
+    setActiveButton(index);
+    rotateCarousel();
+  });
+  span.innerHTML = '&nbsp;';
+  span.classList.add('carousel-skip-to__item');
+  skipToButtonContainer.appendChild(span);
+})
 
 carousel.addEventListener('mouseover', () => {
   isScrolling = false;
-  console.log('in');
+  
 });
+
+
 
 carousel.addEventListener('mouseout', () => {
   isScrolling = true;
-  console.log('out');
+
 });
 function rotateCarousel() {
+  //if (selectedIndex > 7) selectedIndex = 0;
   var angle = theta * selectedIndex * -1;
   carousel.style.transform =
     'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
+  
+  setActiveButton(selectedIndex);
+  console.log(selectedIndex);
 }
 
 var prevButton = document.querySelector('.previous-button');
@@ -77,6 +98,7 @@ function changeCarousel() {
   }
 
   rotateCarousel();
+  
 }
 
 var orientationRadios = document.querySelectorAll('input[name="orientation"]');
@@ -91,17 +113,32 @@ function onOrientationChange() {
   var checkedRadio = document.querySelector(
     'input[name="orientation"]:checked'
   );
-  isHorizontal =  true//checkedRadio.value == 'horizontal';
+  isHorizontal = true; //checkedRadio.value == 'horizontal';
   rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
   changeCarousel();
 }
+
+function setActiveButton(itemIndex) {
+  let items = document.querySelectorAll('.carousel-skip-to__item');
+  items = Array.from(items);
+  items.forEach((item, index) => { 
+    item.classList.remove('carousel-skip-to--active');
+    if (index === itemIndex) {
+      item.classList.add('carousel-skip-to--active');
+    }
+
+  })
+
+}
+
 
 // set initials
 onOrientationChange();
 
 const timeout = setInterval(() => {
-  console.log(isScrolling);
   if (!isScrolling) return;
-  selectedIndex++;
-  rotateCarousel();
+  // selectedIndex++;
+  //setActiveButton(selectedIndex);
+
+  // rotateCarousel();
 }, 5000);
