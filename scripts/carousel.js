@@ -27,55 +27,87 @@ var cellHeight = carousel.offsetHeight;
 var isHorizontal = true;
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 var radius, theta;
+let lastId = 6;
+let firstId = 0;
 
 const skipToButtonContainer = document.querySelector('.carousel-skip-to');
 
 cells.forEach((item, index) => {
-  
-  
   const span = document.createElement('span');
-  span.addEventListener('click', () => {
-    selectedIndex = index;
-    setActiveButton(index);
+  span.addEventListener('click', (e) => {
+    //selectedIndex = index;
+    const id = parseInt(e.target.id);
+    if (selectedIndex > id) {
+      selectedIndex = id;
+    } else if (selectedIndex < id) {
+      selectedIndex = selectedIndex + (id - selectedIndex);
+    }
+    setActiveButton(selectedIndex);
     rotateCarousel();
   });
   span.innerHTML = '&nbsp;';
+  span.id = index;
   span.classList.add('carousel-skip-to__item');
   skipToButtonContainer.appendChild(span);
-})
+});
 
 carousel.addEventListener('mouseover', () => {
   isScrolling = false;
-  
 });
-
-
 
 carousel.addEventListener('mouseout', () => {
   isScrolling = true;
-
 });
 function rotateCarousel() {
   //if (selectedIndex > 7) selectedIndex = 0;
   var angle = theta * selectedIndex * -1;
   carousel.style.transform =
     'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
-  
+
   setActiveButton(selectedIndex);
-  console.log(selectedIndex);
 }
 
 var prevButton = document.querySelector('.previous-button');
 prevButton.addEventListener('click', function () {
   selectedIndex--;
+  if (selectedIndex < firstId) {
+    rebuildIds(0);
+  }
   rotateCarousel();
 });
 
 var nextButton = document.querySelector('.next-button');
 nextButton.addEventListener('click', function () {
   selectedIndex++;
+  if (selectedIndex > lastId) {
+    rebuildIds(1);
+  }
   rotateCarousel();
 });
+
+function rebuildIds(direction) {
+  let items = document.querySelectorAll('.carousel-skip-to__item');
+  items = Array.from(items);
+
+  let newId = parseInt(selectedIndex);
+
+  items.forEach((item, index) => {
+    if (index === 0) {
+      firstId = item.id;
+    }
+    if (direction === 1) {
+      item.id = newId++;
+    } else {
+      if (direction === 0) {
+        item.id = newId--;
+      }
+      selectedIndex = item.id;
+    }
+    lastId = item.id;
+  });
+
+  setActiveButton(selectedIndex);
+}
 
 function changeCarousel() {
   cellCount = 7; // cellsRange.value;
@@ -98,7 +130,6 @@ function changeCarousel() {
   }
 
   rotateCarousel();
-  
 }
 
 var orientationRadios = document.querySelectorAll('input[name="orientation"]');
@@ -121,16 +152,13 @@ function onOrientationChange() {
 function setActiveButton(itemIndex) {
   let items = document.querySelectorAll('.carousel-skip-to__item');
   items = Array.from(items);
-  items.forEach((item, index) => { 
+  items.forEach((item, index) => {
     item.classList.remove('carousel-skip-to--active');
-    if (index === itemIndex) {
+    if (parseInt(item.id) === parseInt(itemIndex)) {
       item.classList.add('carousel-skip-to--active');
     }
-
-  })
-
+  });
 }
-
 
 // set initials
 onOrientationChange();

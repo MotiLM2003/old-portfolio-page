@@ -8,12 +8,12 @@ body {
 }
 
 .scene {
-  margin: 19rem auto 5rem auto;
+  margin: 19rem auto 7rem auto;
   position: relative;
   width: 430px;
   height: 22rem;
 
-  perspective: 1000px;
+  perspective: 500px;
 
   //   border: 1px solid green;
 }
@@ -25,18 +25,17 @@ body {
   transform: translateZ(-288px);
   transform-style: preserve-3d;
   transition: transform 1s;
-  margin-bottom: 100rem;
 }
 .carousel-btn-prev {
   position: absolute;
   top: 45%;
-  right: -22rem;
+  right: -17rem;
 }
 
 .carousel-btn-foreward {
   position: absolute;
   top: 45%;
-  left: -22rem;
+  left: -15rem;
 }
 .carousel-arrow {
   font-size: 5rem;
@@ -93,7 +92,7 @@ body {
   flex-direction: column;
 }
 .carousel__info p {
-    margin: -1rem 0 .5rem 0;
+  margin: -1rem 0 0.5rem 0;
 }
 .info-tech {
   height: 3rem;
@@ -101,7 +100,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 0.5rem;
-  width:80%;
+  width: 80%;
   margin-bottom: 0.5;
 }
 .info-tech i {
@@ -109,14 +108,12 @@ body {
   font-size: 4rem;
   @include gradient-text($color-yellow-light, $color-yellow-dark);
   font-size: 30px;
-  width:30px;
+  width: 30px;
   text-align: center;
 }
 .info-tech i .info-image {
-    width:30px;
+  width: 30px;
 }
-
-
 
 .carousel__cell:nth-child(9n + 1) {
   background: rgba(0, 0, 0, 0.8);
@@ -176,27 +173,26 @@ body {
 }
 
 .carousel-skip-to {
-  content:  '';
-  width:500px;
-  height:5px;
-  margin:0 auto;
+  content: '';
+  width: 500px;
+  margin: 0 auto;
   user-select: none;
- 
+  padding-left: 2rem;
 
   &__item {
-      display: inline-block;
-      background-color: rgb(228, 228, 228);
-      border-radius: 1rem;
-      width:1rem;
-      height: 1rem;
-      margin:0 .5rem;
-      cursor: pointer;
-      user-select: none;
-      transition: all .2s ease-in-out;
-      &:hover {
-          background-color: $color-primary-light;
-          transform: scale(1.1);
-      }
+    display: inline-block;
+    background-color: rgb(228, 228, 228);
+    border-radius: 1rem;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-primary-light;
+      transform: scale(1.1);
+    }
   }
 
   &--active {

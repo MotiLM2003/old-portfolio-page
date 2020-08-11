@@ -25,13 +25,13 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navigation">
+    <nav id="navigation" class="navigation">
       <ul class="navigation__menu-items">
-        <li class="btn"><a href="#header">בית</a></li>
-        <li class="btn"><a href="#projects">תיק עבודות</a></li>
-        <li class="btn"><a href="#tech-container"> טכנולוגיות</a></li>
-        <li class="btn"><a href="#tech-container"> כישורים </a></li>
-        <li class="btn"><a href="#tech-container"> צור קשר</a></li>
+        <li class="btn"><a  class="link-item"  id='header-link'>בית</a></li>
+        <li class="btn"><a  class="link-item"  id='projects-link'>תיק עבודות</a></li>
+        <li class="btn"><a  class="link-item"  id="tech-container-link"> טכנולוגיות</a></li>
+        <li class="btn"><a class="link-item" href="#tech-container"> כישורים </a></li>
+        <li class="btn"><a  class="link-item"  href="#tech-container"> צור קשר</a></li>
       </ul>
       <div class="header-tools">
         <ul class="header-tools__list">
@@ -88,7 +88,7 @@
                     <i class="fab fa-js"></i>
                     <i class="fab fa-css3"></i>
                     <i class="fab fa-html5 "></i>
-                    <i><img class="info-image"  src="img/svg/jquery.svg" alt="">
+                    <i><img class="info-image"  src="img/svg/jquery.svg" alt=""></i>
                    </div>
 
                   </div>
@@ -395,6 +395,7 @@
       particlesJS.load('particles', 'particles.json', function () {});
     </script>
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/script.js"></script>
    
 
   </body>
