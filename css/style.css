@@ -531,7 +531,7 @@ body {
   width: 500px;
   margin: 0 auto;
   user-select: none;
-  padding-left: 2rem; }
+  padding-left: 1rem; }
   .carousel-skip-to__item {
     display: inline-block;
     background-color: #e4e4e4;

@@ -1,5 +1,5 @@
 $(function () {
-  console.log('here');
+  //  edge support for smooth scrolling
   $('.link-item').click(function () {
     const me = $(this);
     let id = 'navigation';
@@ -17,7 +17,8 @@ $(function () {
         break;
       }
     }
-    console.log('moving');
+    if (id === '') return;
+    console.log('here');
     $('html, body').animate(
       {
         scrollTop: $(`#${id}`).offset().top,

@@ -51,11 +51,11 @@ cells.forEach((item, index) => {
   skipToButtonContainer.appendChild(span);
 });
 
-carousel.addEventListener('mouseover', () => {
+document.querySelector('.scene').addEventListener('mouseover', () => {
   isScrolling = false;
 });
 
-carousel.addEventListener('mouseout', () => {
+document.querySelector('.scene').addEventListener('mouseout', () => {
   isScrolling = true;
 });
 function rotateCarousel() {
@@ -110,7 +110,8 @@ function rebuildIds(direction) {
 }
 
 function changeCarousel() {
-  cellCount = 7; // cellsRange.value;
+  console.log(cells.length);
+  cellCount = cells.length; // 12; // cellsRange.value;
   theta = 360 / cellCount;
   var cellSize = isHorizontal ? cellWidth : cellHeight;
   radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellCount));
@@ -165,8 +166,8 @@ onOrientationChange();
 
 const timeout = setInterval(() => {
   if (!isScrolling) return;
-  // selectedIndex++;
-  //setActiveButton(selectedIndex);
+  selectedIndex++;
+  setActiveButton(selectedIndex);
 
-  // rotateCarousel();
+  rotateCarousel();
 }, 5000);
