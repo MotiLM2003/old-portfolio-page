@@ -382,6 +382,17 @@ u-center-text {
     font-weight: 700;
     margin-bottom: 2rem;
     color: #f7f7f7; }
+  .card-1 .card_logo {
+    width: 18.3rem;
+    height: 100px; }
+  .card-1__tech-skill {
+    height: 10rem;
+    width: 10rem;
+    padding-top: 1.5rem; }
+  .card-1--CS {
+    fill: #034f84; }
+  .card-1--SQL {
+    fill: #ffb900; }
   .card-1--node {
     background-image: linear-gradient(#7ed56f, #087523);
     color: transparent;

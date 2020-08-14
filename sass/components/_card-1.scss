@@ -12,7 +12,7 @@
   &__header {
     height: 6rem;
 
-    background: linear-gradient(-45deg,$color-primary, $color-primary-light);
+    background: linear-gradient(-45deg, $color-primary, $color-primary-light);
     background-size: 200% 200%;
     animation: backgroud 10s ease infinite;
 
@@ -27,13 +27,32 @@
     color: $text-color-1;
   }
 
+  .card_logo {
+    width: 18.3rem;
+    height: 100px;
+  }
+
+  &__tech-skill {
+    height: 10rem;
+    width: 10rem;
+    padding-top: 1.5rem;
+  }
+
+  &--CS {
+    fill: $color-primary;
+  }
+
+  &--SQL {
+    fill: $color-yellow-dark;
+  }
+
   &--node {
     @include gradient-text;
   }
 
   margin-right: 5rem;
   &--react {
-    @include gradient-text(#61dafc,#22a3c7);
+    @include gradient-text(#61dafc, #22a3c7);
   }
   &--javascript {
     @include gradient-text($color-yellow-light, $color-yellow-dark);
