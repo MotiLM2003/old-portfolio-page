@@ -252,7 +252,7 @@ u-center-text {
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); }
   @media screen and (max-width: 1200px) {
     .navigation {
-      width: 142rem; } }
+      width: 153rem; } }
   @media screen and (max-width: 800px) {
     .navigation {
       height: 13rem; } }
@@ -413,11 +413,14 @@ body {
   text-align: center; }
 
 .scene {
-  margin: 19rem auto 14rem auto;
+  margin: 19rem auto 11rem auto;
   position: relative;
   width: 430px;
   height: 22rem;
   perspective: 1000px; }
+  @media screen and (max-width: 600px) {
+    .scene {
+      margin-bottom: 14rem; } }
 
 .carousel {
   width: 100%;
@@ -451,8 +454,8 @@ body {
 
 .carousel__cell {
   position: absolute;
-  width: 50rem;
-  height: 32rem;
+  width: 500px;
+  height: 300px;
   left: 0;
   top: 0;
   font-size: 80px;
@@ -574,7 +577,13 @@ body {
   width: 50rem;
   margin: 0 auto;
   user-select: none;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 600px) {
+    .carousel-skip-to {
+      justify-content: space-between; } }
   .carousel-skip-to__item {
     display: inline-block;
     background-color: #e4e4e4;
@@ -585,6 +594,11 @@ body {
     cursor: pointer;
     user-select: none;
     transition: all 0.2s ease-in-out; }
+    @media screen and (max-width: 600px) {
+      .carousel-skip-to__item {
+        border-radius: 2rem;
+        width: 3rem;
+        height: 3rem; } }
     .carousel-skip-to__item:hover {
       background-color: #92a8d1;
       transform: scale(1.1); }
@@ -628,10 +642,10 @@ body {
       margin-top: -13rem; } }
   @media screen and (max-width: 1200px) {
     .header {
-      width: 142rem; } }
+      width: 153rem; } }
   @media screen and (max-width: 1200px) {
     .header {
-      width: 142rem; } }
+      width: 153rem; } }
   .header__box {
     position: absolute;
     top: 40%;
@@ -732,7 +746,7 @@ body {
   transform: skewY(-7deg); }
   @media screen and (max-width: 1199px) {
     .section-info__container {
-      width: 142rem; } }
+      width: 153rem; } }
   .section-info__container .wrapper {
     transform: skewY(6deg);
     padding-top: 17rem; }
