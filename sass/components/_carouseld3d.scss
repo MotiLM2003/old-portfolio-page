@@ -29,13 +29,15 @@ body {
 .carousel-btn-prev {
   position: absolute;
   top: 45%;
-  left: 128%;
+  left: 132%;
+  display: none;
 }
 
 .carousel-btn-foreward {
   position: absolute;
   top: 45%;
   right: 131%;
+  display: none;
 }
 .carousel-arrow {
   font-size: 5rem;
@@ -174,7 +176,7 @@ body {
 
 .carousel-skip-to {
   content: '';
-  width: 500px;
+  width: 50rem;
   margin: 0 auto;
   user-select: none;
   padding-left: 1rem;

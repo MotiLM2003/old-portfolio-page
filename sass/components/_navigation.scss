@@ -1,20 +1,50 @@
 .navigation {
-  position: fixed;
-  top: 0rem;
-  right: 0rem;
+  position: sticky;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 7.4rem;
+  @media screen and (max-width: 1200px) {
+    width: $small-size-screen;
+  }
+  display: flex;
+  height: 9rem;
   background-color: #000;
-  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
   background-color: rgba(#000000, 0.4);
-  padding-top: 1.5rem;
+
   padding-right: 0.8rem;
-  text-align: right;
+
   @include box-shadow-1;
   &__menu-items {
   }
   &__menu-items li {
     display: inline-block;
     margin-left: 4rem;
+  }
+}
+
+.header-tools {
+  color: $text-color-0;
+  z-index: 100;
+  font-size: 2.5rem;
+  font-weight: 400;
+
+  &__list li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__github-icon {
+    margin-top: -0.9rem;
+    font-size: 5rem;
+    margin-right: 1rem;
+  }
+
+  & :link,
+  & :visited,
+  & :active {
+    color: $text-color-0;
   }
 }

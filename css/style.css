@@ -63,6 +63,15 @@ body {
   min-width: 120rem;
   margin: 0 auto;
   max-width: 114rem; }
+  @media screen and (max-width: 800px) {
+    .wrapper {
+      max-width: 80rem; } }
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      max-width: 60rem; } }
+  @media screen and (max-width: 400px) {
+    .wrapper {
+      max-width: 40rem; } }
 
 #particles {
   position: absolute;
@@ -228,21 +237,42 @@ u-center-text {
     width: calc((100% / 12) * 12); }
 
 .navigation {
-  position: fixed;
-  top: 0rem;
-  right: 0rem;
+  position: sticky;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 7.4rem;
+  display: flex;
+  height: 9rem;
   background-color: #000;
-  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 1.5rem;
   padding-right: 0.8rem;
-  text-align: right;
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); }
+  @media screen and (max-width: 1200px) {
+    .navigation {
+      width: 142rem; } }
   .navigation__menu-items li {
     display: inline-block;
     margin-left: 4rem; }
+
+.header-tools {
+  color: #fff;
+  z-index: 100;
+  font-size: 2.5rem;
+  font-weight: 400; }
+  .header-tools__list li {
+    display: inline-block;
+    vertical-align: middle; }
+  .header-tools__github-icon {
+    margin-top: -0.9rem;
+    font-size: 5rem;
+    margin-right: 1rem; }
+  .header-tools :link,
+  .header-tools :visited,
+  .header-tools :active {
+    color: #fff; }
 
 .btn {
   font-weight: 700;
@@ -389,12 +419,14 @@ body {
 .carousel-btn-prev {
   position: absolute;
   top: 45%;
-  left: 128%; }
+  left: 132%;
+  display: none; }
 
 .carousel-btn-foreward {
   position: absolute;
   top: 45%;
-  right: 131%; }
+  right: 131%;
+  display: none; }
 
 .carousel-arrow {
   font-size: 5rem;
@@ -528,7 +560,7 @@ body {
 
 .carousel-skip-to {
   content: '';
-  width: 500px;
+  width: 50rem;
   margin: 0 auto;
   user-select: none;
   padding-left: 1rem; }
@@ -558,12 +590,20 @@ body {
   margin: 0 auto;
   padding-right: 3rem;
   border: 0.1rem solid #034f84;
-  width: 38%;
+  width: 60%;
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); }
+  @media screen and (max-width: 1000px) {
+    .text-header {
+      width: 80%; } }
+  @media screen and (max-width: 600px) {
+    .text-header {
+      width: 85%; } }
 
 .header {
   height: 97vh;
   width: 100%;
+  margin-top: -9rem;
+  margin-bottom: 38rem;
   display: block;
   z-index: 1;
   overflow: hidden;
@@ -573,7 +613,10 @@ body {
   position: relative; }
   @media screen and (max-width: 1200px) {
     .header {
-      width: 135rem; } }
+      width: 142rem; } }
+  @media screen and (max-width: 1200px) {
+    .header {
+      width: 142rem; } }
   .header__box {
     position: absolute;
     top: 40%;
@@ -584,7 +627,8 @@ body {
     .header__box h1,
     .header__box h2 {
       padding: 1rem;
-      border-radius: 1rem; }
+      border-radius: 1rem;
+      width: 130rem; }
     .header__box h1 {
       font-size: 4.5rem;
       font-weight: 700;
@@ -598,7 +642,6 @@ body {
       letter-spacing: 2.7rem;
       text-align: center;
       margin-top: 1.2rem;
-      margin-right: -1.3rem;
       background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       animation: moveRight 1.2s 1.2s backwards ease-out;
@@ -618,26 +661,6 @@ body {
 .bg-video__content {
   width: 100%;
   object-fit: cover; }
-
-.header-tools {
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  color: #fff;
-  z-index: 100;
-  font-size: 2.5rem;
-  font-weight: 400; }
-  .header-tools__list li {
-    display: inline-block;
-    vertical-align: middle; }
-  .header-tools__github-icon {
-    margin-top: -0.9rem;
-    font-size: 5rem;
-    margin-right: 1rem; }
-  .header-tools :link,
-  .header-tools :visited,
-  .header-tools :active {
-    color: #fff; }
 
 .about-us-container {
   margin-top: 1.5rem; }
@@ -660,8 +683,9 @@ body {
   padding-bottom: 55rem;
   position: relative;
   height: 150rem; }
-  .tech-container .wrapper {
-    margin-top: 190px; }
+  @media screen and (max-width: 1199px) {
+    .tech-container {
+      width: 142rem; } }
 
 .tech__icon {
   font-size: 10rem; }
@@ -683,9 +707,9 @@ body {
   height: 138rem;
   background-size: cover;
   transform: skewY(-7deg); }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     .section-info__container {
-      width: 135rem; } }
+      width: 142rem; } }
   .section-info__container .wrapper {
     transform: skewY(6deg);
     padding-top: 17rem; }
