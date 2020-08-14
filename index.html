@@ -25,39 +25,39 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav id="navigation" class="navigation">
-      <ul class="navigation__menu-items">
-        <li class="btn"><a  class="link-item"  id='header-link'>בית</a></li>
-        <li class="btn"><a  class="link-item"  id='projects-link'>תיק עבודות</a></li>
-        <li class="btn"><a  class="link-item"  id="tech-container-link"> טכנולוגיות</a></li>
-        <li class="btn"><a class="link-item" > כישורים </a></li>
-        <li class="btn"><a  class="link-item"  > צור קשר</a></li>
-      </ul>
-      <div class="header-tools">
-        <ul class="header-tools__list">
-          <li class="header-tools__item">
-            נייד: 058-6552717
-          </li>
-          <li class="header-tools__item">            <a target="_blank" href="https://github.com/MotiLM2003"
-              ><i class="fab fa-github header-tools__github-icon"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  
 
-    <div class="main-content">
+  
       <section class="header" id="header">
+        <div  id="particles"></div>
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/background.mp4" >
            
           </video>
-        </div>
-        <div  id="particles"></div>
+        
+          <nav id="navigation" class="navigation">
+            <ul class="navigation__menu-items">
+              <li class="btn"><a  class="link-item"  id='header-link'>בית</a></li>
+              <li class="btn"><a  class="link-item"  id='projects-link'>תיק עבודות</a></li>
+              <li class="btn"><a  class="link-item"  id="tech-container-link"> טכנולוגיות</a></li>
+              <li class="btn"><a  class="link-item"  > צור קשר</a></li>
+            </ul>
+            <div class="header-tools">
+              <ul class="header-tools__list">
+                <li class="header-tools__item">
+                  נייד: 058-6552717
+                </li>
+                <li class="header-tools__item">            <a target="_blank" href="https://github.com/MotiLM2003"
+                    ><i class="fab fa-github header-tools__github-icon"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
         <div class="header__box" >
-          <h1>פיתרונות טכנולגים מתקדמים</h1>
+          <h1>פתרונות טכנולגים מתקדמים</h1>
           <h2>הגשם את החלום שלך</h2>
         </div>
       </section>
@@ -201,7 +201,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carousel__cell">
+                 <div class="carousel__cell">
                   <a
                     href="https://motilm2003.github.io/quotes-robo/"
                     target="_blank"
@@ -219,24 +219,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carousel__cell">
-                  <a
-                    href="https://motilm2003.github.io/quotes-robo/"
-                    target="_blank"
-                  >
-                    <img  class="project-image" src="img/projects/p-3.JPG"
-                  /></a>
-                  <div class="carousel__info">
-                    <p>
-                      טכנולוגיות
-                    </p>
-                    <div class="info-tech">
-                      <i class="fab fa-html5 "></i>
-                     <i class="fab fa-css3"></i>
-                     <i class="fab fa-js"></i>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
               <div class="carousel-btn-foreward carousel-arrow next-button">
                 <i class="fas fa-arrow-alt-circle-left"></i>
@@ -419,17 +402,7 @@
   ></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        delay: 100,
-        duration: 1200,
-        once: true,
-        mirror: false,
-      });
-    </script>
-    <script>
-      particlesJS.load('particles', 'particles.json', function () {});
-    </script>
+   
     <script src="scripts/carousel.js"></script>
     <script src="scripts/script.js"></script>
    

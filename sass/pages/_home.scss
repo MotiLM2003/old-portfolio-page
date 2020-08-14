@@ -1,8 +1,13 @@
 .header {
   height: 97vh;
   width: 100%;
+  @media screen and (max-width: 1200px) {
+    width: 135rem;
+  }
+
   display: block;
   z-index: 1;
+  overflow: hidden;
   background-image: linear-gradient(
       rgba($color-primary-light, 0.68),
       rgba($color-primary-dark, 0.8)
@@ -68,7 +73,7 @@
 }
 .bg-video__content {
   width: 100%;
-
+  //height: 118.5rem;
   object-fit: cover;
 }
 
@@ -158,6 +163,9 @@
   height: 138rem;
   background-size: cover;
   transform: skewY(-7deg);
+  @media screen and (max-width: 1200px) {
+    width: 135rem;
+  }
   .wrapper {
     transform: skewY(6deg);
     padding-top: 17rem;

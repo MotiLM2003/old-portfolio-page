@@ -1,4 +1,13 @@
 $(function () {
+  AOS.init({
+    delay: 100,
+    duration: 1200,
+    once: true,
+    mirror: false,
+  });
+
+  particlesJS.load('particles', 'particles.json', function () {});
+
   //  edge support for smooth scrolling
   $('.link-item').click(function () {
     const me = $(this);

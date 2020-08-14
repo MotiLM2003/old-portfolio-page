@@ -389,12 +389,12 @@ body {
 .carousel-btn-prev {
   position: absolute;
   top: 45%;
-  right: -17rem; }
+  left: 128%; }
 
 .carousel-btn-foreward {
   position: absolute;
   top: 45%;
-  left: -15rem; }
+  right: 131%; }
 
 .carousel-arrow {
   font-size: 5rem;
@@ -566,10 +566,14 @@ body {
   width: 100%;
   display: block;
   z-index: 1;
+  overflow: hidden;
   background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(2, 44, 73, 0.8)), url("../img/header_logo.jpg");
   background-size: cover;
   clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 74%, 73% 81%, 31% 91%, 0 100%, 0 0);
   position: relative; }
+  @media screen and (max-width: 1200px) {
+    .header {
+      width: 135rem; } }
   .header__box {
     position: absolute;
     top: 40%;
@@ -679,6 +683,9 @@ body {
   height: 138rem;
   background-size: cover;
   transform: skewY(-7deg); }
+  @media screen and (max-width: 1200px) {
+    .section-info__container {
+      width: 135rem; } }
   .section-info__container .wrapper {
     transform: skewY(6deg);
     padding-top: 17rem; }
