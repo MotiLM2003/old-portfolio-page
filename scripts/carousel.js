@@ -22,6 +22,7 @@ var carousel = document.querySelector('.carousel');
 var cells = carousel.querySelectorAll('.carousel__cell');
 var cellCount; // cellCount set from cells-range input value
 var selectedIndex = 3;
+console.log(carousel.offsetWidth);
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
 var isHorizontal = true;
@@ -114,7 +115,7 @@ function changeCarousel() {
   cellCount = cells.length; // 12; // cellsRange.value;
   theta = 360 / cellCount;
   var cellSize = isHorizontal ? cellWidth : cellHeight;
-  radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellCount));
+  radius = Math.round(cellSize / 1.5 / Math.tan(Math.PI / cellCount));
   for (var i = 0; i < cells.length; i++) {
     var cell = cells[i];
     if (i < cellCount) {
@@ -165,9 +166,8 @@ function setActiveButton(itemIndex) {
 onOrientationChange();
 
 const timeout = setInterval(() => {
-  if (!isScrolling) return;
-  selectedIndex++;
-  setActiveButton(selectedIndex);
-
-  rotateCarousel();
+  // if (!isScrolling) return;
+  // selectedIndex++;
+  // setActiveButton(selectedIndex);
+  // rotateCarousel();
 }, 5000);

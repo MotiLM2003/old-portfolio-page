@@ -413,7 +413,7 @@ body {
   text-align: center; }
 
 .scene {
-  margin: 19rem auto 11rem auto;
+  margin: 19rem auto 14rem auto;
   position: relative;
   width: 430px;
   height: 22rem;
@@ -451,8 +451,8 @@ body {
 
 .carousel__cell {
   position: absolute;
-  width: 400px;
-  height: 300px;
+  width: 50rem;
+  height: 32rem;
   left: 0;
   top: 0;
   font-size: 80px;
