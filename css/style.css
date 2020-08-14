@@ -253,15 +253,26 @@ u-center-text {
   @media screen and (max-width: 1200px) {
     .navigation {
       width: 142rem; } }
+  @media screen and (max-width: 800px) {
+    .navigation {
+      height: 13rem; } }
   .navigation__menu-items li {
     display: inline-block;
     margin-left: 4rem; }
+    @media screen and (max-width: 800px) {
+      .navigation__menu-items li {
+        font-size: 3.4rem;
+        width: 20rem;
+        height: 7rem; } }
 
 .header-tools {
   color: #fff;
   z-index: 100;
   font-size: 2.5rem;
   font-weight: 400; }
+  @media screen and (max-width: 800px) {
+    .header-tools {
+      font-size: 4rem; } }
   .header-tools__list li {
     display: inline-block;
     vertical-align: middle; }
@@ -591,7 +602,8 @@ body {
   padding-right: 3rem;
   border: 0.1rem solid #034f84;
   width: 60%;
-  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 8rem; }
   @media screen and (max-width: 1000px) {
     .text-header {
       width: 80%; } }
@@ -607,10 +619,13 @@ body {
   display: block;
   z-index: 1;
   overflow: hidden;
-  background-image: linear-gradient(rgba(146, 168, 209, 0.68), rgba(2, 44, 73, 0.8)), url("../img/header_logo.jpg");
+  background-image: linear-gradient(rgba(146, 168, 209, 0.48), rgba(2, 44, 73, 0.4)), url("../img/background.jpg");
   background-size: cover;
   clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 74%, 73% 81%, 31% 91%, 0 100%, 0 0);
   position: relative; }
+  @media screen and (max-width: 800px) {
+    .header {
+      margin-top: -13rem; } }
   @media screen and (max-width: 1200px) {
     .header {
       width: 142rem; } }
@@ -626,18 +641,26 @@ body {
     z-index: 100; }
     .header__box h1,
     .header__box h2 {
-      padding: 1rem;
-      border-radius: 1rem;
-      width: 130rem; }
+      border-radius: 2.5rem; }
+      .header__box h1 p,
+      .header__box h2 p {
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 130rem;
+        background: linear-gradient(to top, white 40%, #92a8d1 10%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); }
     .header__box h1 {
-      font-size: 4.5rem;
-      font-weight: 700;
       animation: moveLeft 1.2s 1s backwards ease-out;
       background-color: rgba(0, 0, 0, 0.3);
-      color: #fff;
       box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2); }
+      .header__box h1 p {
+        font-size: 8.5rem;
+        font-weight: 700; }
     .header__box h2 {
-      font-size: 3rem;
+      font-size: 5rem;
       color: #f7f7f7;
       letter-spacing: 2.7rem;
       text-align: center;
