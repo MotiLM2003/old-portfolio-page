@@ -8,12 +8,12 @@ body {
 }
 
 .scene {
-  margin: 19rem auto 7rem auto;
+  margin: 19rem auto 11rem auto;
   position: relative;
   width: 430px;
   height: 22rem;
 
-  perspective: 500px;
+  perspective: 1000px;
 
   //   border: 1px solid green;
 }
@@ -54,7 +54,7 @@ body {
 .carousel__cell {
   position: absolute;
   width: 400px;
-  height: 250px;
+  height: 300px;
   left: 0;
   top: 0;
   font-size: 80px;
