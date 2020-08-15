@@ -1,6 +1,6 @@
 particlesJS('particles', {
   particles: {
-    number: { value: 40, density: { enable: true, value_area: 900 } },
+    number: { value: 55, density: { enable: true, value_area: 900 } },
     color: { value: '#fff' },
     shape: {
       type: 'polygon',
@@ -21,13 +21,13 @@ particlesJS('particles', {
     line_linked: {
       enable: true,
       distance: 151,
-      color: '#fff',
+      color: '#034f84',
       opacity: 0.2,
       width: 12,
     },
     move: {
       enable: true,
-      speed: 6,
+      speed: 2,
       direction: 'none',
       random: true,
       straight: false,
